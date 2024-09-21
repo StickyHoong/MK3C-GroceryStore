@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <h2>Login</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Name">
+                <span class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAUFJREFUSEvNlmESwUAMRuMmnAQ34SQ4CU6Ck+Ak9M3smtrubrLEVGY6frTyki9fN53ISDEZiSufgqcisuquW7jOrQ20ggHuRWSRgChgGYow1dACBnaqZAW+7ooydd8CBpp2mtYBfGZp2QpmnkhsCSRXu7aCtyKysVBFZNc9x/PV+AX4EGbtAtaM1YdgMOAuYF6jq5Ys3MdcmMwFTBKLwUzGIpl1xrH6mslMpoqJWsH8D9mZ+TwkuYeZqvL2tf8ErI3PdP/vwVFefqPEaWdIfbFuK63j0jbS5OQ9xmzFudfALYdGrhCgx9LxWQJ/C42FFFdlCWxZgZrcffhgVebALZvICh+c3zkwe5fj0TPYzxynr8iBWQa42TMGXyY58MOT2Mv1tkBSsJebc7VXwUjsLXMs4u07TDu5fqR6+z52K2S0jp8qNTYfcSiZaQAAAABJRU5ErkJggg=="/></span> <!-- User icon -->
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email">
+                <span class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQtJREFUSEvtltERwiAQRDedaCdaiVqJWol2op1oJ5rNcJmTATkImhmFP2O4d28hJB1mGt1MXDTw15L3o94C2ANYVO7gDuDY1z1LXQ0m7FYZ6JdbA7jyogYfnC2vs8Pa1qy7E+sYmJ2dKsApQNjFqTNuCkaNpSHCV4UNjJA+yYcVvHRx836Cc+zFclhLN8xgTmJELCLDYq8tOY/7RObxdzJqgRHOJqSBmH3IUm9WqWcGc0LKPmWpH6ks8Dt7aUzuCVlOBsfsQ2sZO4eKjHUxvfYpyyrGuog8Ltxw1jHZ2Ary72vgIZGcTfIbUfPrg+fqJ8f48vE/fRj3pvA1mGr45Whtn7epuKr9/39RPwGVOVAfVQ5vVAAAAABJRU5ErkJggg=="/></span> <!-- Email icon -->
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password">
+                <span class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQ1JREFUSEvtluENAiEMhXuTqJvoJjqJOok6yekk6iTKS0pSDwoFNPdDmpC7wB0ffS1NB5rJhpm4VAteEtHWjQePa6kDpeA1EY0RCA5wcfMH6wFKwPDwlNn4aIVbwdJTeAfA2Q1IjrU9v2Nt5+ay0lvBkBcA2IrjKp3HAe48AegmJ7kV/OKNUlIivvAcXuNwSbOApcyQERLHTH4Hj5Nyl4JTG3ZwtdS+Oi24SiGuiO9TifH0uxvHGckWmBZjrULlknW6Lu/8x5oGlve2FBaDB9dLA/t72wr1/wecDvbSdKlbk6wnl9rs/V9yfbNkRlshrXJZOkprpkebh1QH4jtIPGtN7bMtrU8ttLnZ+wn4DU62QB+Jid1mAAAAAElFTkSuQmCC"/></span> <!-- Lock icon -->
+            </div>
+            <div class="options">
+                <label><input type="checkbox" id="remember"> Remember me</label>
+                <a href="#">Forget Password?</a>
+            </div>
+            <button type="button" class="btnlogin">Login</button>
+            <div class="register">
+                <p>Don't have an account? <a href="/daftar.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const username = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const button = document.querySelector(".btnlogin");
+
+        button.addEventListener("click", function() {
+            if (username.value === "kukuh07" && email.value === "naufalkukuh09@gmail.com" && password.value === "4321") {
+                window.location.href = "/landingpage.html";
+            } else {
+                alert("Data you entered is not valid");
+                password.value = "";
+                email.value = "";
+                username.value = "";
+            }
+        });
+    </script>
+
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #333;
+        }
+
+        .login-container {
+            background: rgba(21, 18, 18, 0.5);
+            border-radius: 15px;
+            padding: 40px;
+            position: relative;
+            width: 320px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #fff;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            padding-left: 40px;
+            border: none;
+            border-bottom: 2px solid #555;
+            background: none;
+            color: #fff;
+            outline: none;
+            font-size: 16px;
+      
+        }
+        
+        .input-group input::placeholder {
+            padding: 10px;
+        }
+
+        .input-group .icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-family: FontAwesome;
+            font-size: 18px;
+            color: #999;
+            margin-right: 20px;
+        }
+      
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+        }
+
+        .options input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .options a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+
+        .btnlogin {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .btnlogin:hover {
+            background-color: #45a049;
+        }
+
+        .register {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .register a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+      
+    </style>
+
+</body>
+</html>
